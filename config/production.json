@@ -1,0 +1,4 @@
+{
+  "host": "edge-service-host-app.feathersjs.com",
+  "port": "PORT"
+}

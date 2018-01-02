@@ -1,0 +1,37 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "daCollectorUrl": "http://localhost:9000/api/common",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "secret": "9152e29929a7285f621110c325e2e01956074356a077af0f456a3a0071dc1fc6695c216f71639c9812df0933e6eb9646abc1608d52a8e1e4b140f5c87aab0060d481d0304eb04ef79b1763e34d3cc97879988a5e28935ba1550e70832f493975c44083776ae6f024aa077ae123caee4677da0f43945f9503aeea5aec35d44aa08d833a8c8b93b3256c913af21eafdc78ba3762e554bf7fa6cb1ae867214e8b2b63032ff21e9d2f737f07b60675ad5d8e6c1f6753325700b3d420a33a01b3c0ca8b92fa8ae1ecf57a8044811a13faa2d0def238e33afe110022635f8f826eae207583a48758d6ee1fe4b2c21a82ec735afabd4b2e3561a89be7e277067726f2e9",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "type": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  },
+  "nedb": "../data",
+  "mongodb": "mongodb://localhost:27017/edge_service_host"
+  //"mongodb": "mongodb://panshihuan0011:5378152huan@ds141284.mlab.com:41284/firsttest"
+}
